@@ -1,0 +1,23 @@
+body {
+	font-size: 16px;
+	font-family: "Roboto Regular", sans-serif;
+	line-height: 1.5;
+	color: #283136;
+	font-weight: normal;
+	
+}
+h1 {
+	font-size: 55px;
+	font-family: "Roboto Medium", sans-serif;
+	line-height: 55px;
+	color: #000000;
+	font-weight: normal;
+}
+h2 {
+	font-size: 24px;
+	font-family: "Roboto Bold", sans-serif;
+	line-height: 30px;
+	color: #000000;
+	font-weight: bold;
+	text-transform: uppercase;
+}
