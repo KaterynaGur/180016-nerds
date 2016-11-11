@@ -11,20 +11,20 @@
 			<div class="container">  		
 				<div class="nav-catalog clearfix">
 				<div class="logo">
-					<a href="#"> 
+					<a href="../180016-nerds/index.html"> 
 						<img src="img/nerds-logo.png" width="160" height="65" alt="Нёрдс">
 					</a>
 				</div>
 				<nav class="main-navigation">
 					<ul>
 						<li>
-							<a href="#">Студия</a>
+							<a href="../180016-nerds/index.html">Студия</a>
 						</li>
 						<li>
 							<a href="#">Клиенты</a>
 						</li>
 						<li>
-							<a href="#">Магазин</a>
+							<a class="current">Магазин</a>
 						</li>
 						<li>
 							<a href="#">Контакты</a>
@@ -58,57 +58,57 @@
 								<div class="range-item range-item-right">
 									<a href=""></a>
 								</div>
-						</div>
-						<div class="form-block">
+							</div>
+							<div class="form-block">
 								<div class="form-item">
 									<span>от</span>
-									<input type="text"  value="0"/>
+									<input type="text" value="0"/>
 								</div>
 								<div class="form-item">
 									<span>до</span>
 									<input type="text" value="15000"/>
 								</div>
+							</div>
 						</div>
-					</div>
 					<div class="layout">
 						<h2 class="catalog-title">Сетка:</h2>
-						<label>
+						 <p><label>
 							<input type="radio" name="layout" value="adaptive" checked>
 							Адаптивная
-						</label><br>
-						<label>
+						</label></p>
+						<p><label>
 							<input type="radio" name="layout" value="fixed">
 							Фиксированная
-						</label><br>
-						<label>
+						</label></p>
+						<p><label>
 							<input type="radio" name="layout" value="responsive">
 							Резиновая
-						</label>
+						</label></p>
 					</div>
 					<div class="special">
 						<h2 class="catalog-title">Особенности:</h2>
-						<label>
+						<p><label>
 							<input type="checkbox" name="slider" checked>
 							Слайдер
-						</label><br>
-						<label>
+						</label></p>
+						<p><label>
 							<input type="checkbox" name="features block">
 							Блок преимуществ
-						</label><br>
-						<label>
+						</label></p>
+						<p><label>
 							<input type="checkbox" name="news" checked>
 							Новости
-						</label><br>
-						<label>
+						</label></p>
+						<p><label>
 							<input type="checkbox" name="gallery">
 							Галерея
-						</label><br>
-						<label>
+						</label></p>
+						<p><label>
 							<input type="checkbox" name="cart">
 							Корзина
-						</label>
+						</label></p>
 					</div>
-					<input type="submit" value="Показать">
+					<input class="submit" type="submit" value="Показать">
 					</form>
 				</aside>
 				<div class="product">
@@ -120,7 +120,7 @@
 							<div class="name-tipe">
 								<ul>
 									<li>
-										<a href="#">По цене</a>
+										<a class="active" href="#">По цене</a>
 									</li>
 									<li>
 										<a href="#">По типу</a>
@@ -133,7 +133,7 @@
 							<div class="sorting-up-down">
 								<ul>
 									<li class="sorting-up active">
-										<a href="#"></a>
+										<a class="active" href="#"></a>
 									</li>
 									<li class="sorting-down">
 										<a href="#"></a>
@@ -253,21 +253,11 @@
 						</div>
 						</div>
 					<div class="pagination">
-					<ul>
-						<li class="active-pagination">
-							<a href="#">1</a>
-						</li>
-						<li>
-							<a href="#">2</a>
-						</li>
-						<li>
-							<a href="#">3</a>
-						</li>
-						<li>
-							<a href="#">Следующая</a>
-						</li>
-					</ul>
-				</div>
+						<a class="current">1</a>
+						<a href="#">2</a>
+						<a href="#">3</a>
+						<a class="next" href="#">Следующая</a>
+					</div>
 				</div>
 			</div>
 			</div>
