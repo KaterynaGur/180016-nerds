@@ -860,6 +860,10 @@ aside {
 .name-checkbox input[type="checkbox"]:disabled + .checkbox-indicator {
 	opacity: 0.1;
 }
+input[type="radio"]:disabled ~ .title-radio,
+input[type="checkbox"]:disabled ~ .title-checkbox {
+	opacity: 0.3;
+}
 .submit {
 	font-size: 16px;
 	line-height: 18px;
@@ -1121,10 +1125,35 @@ h3.template {
 	display: none;
 }
 .modal-content-show {
-  display: block;
+	display: block;
+	-webkit-animation-name: zoom;
+	animation-name: zoom;
+	animation-duration: 1s;
+}
+@-webkit-keyframes zoom {
+	from {
+		opacity: 0;
+		-webkit-transform: scale3d(.3, .3, .3);
+		transform: scale3d(.3, .3, .3);
+	}
+
+	50% {
+		opacity: 1;
+	}
+}
+@keyframes zoom {
+	from {
+		opacity: 0;
+		-webkit-transform: scale3d(.3, .3, .3);
+		transform: scale3d(.3, .3, .3);
+	}
+
+	50% {
+		opacity: 1;
+	}
 }
 .modal-error {
-  animation: shake 0.6s;
+	background: lightyellow;
 }
 .modal-content-close {
 	position: absolute;
@@ -1181,6 +1210,13 @@ h3.template {
 	border-color: #000000;
 	outline: 0;
 }
+.writeus-form-error input[type="text"],
+.writeus-form-error input[type="email"],
+.writeus-form-error textarea {
+	border-color: #e74246;
+	color: #e74246;
+}
+
 .writeus-form .user-info {
 	display: inline-block;
 	width: 360px;
@@ -1191,7 +1227,7 @@ h3.template {
 	margin-right: 0;
 }
 .user-info .contact-name {
-	opacity: 0.5;
+	opacity: 1;
 }
 .writeus-form label {
 	display: block;
