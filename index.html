@@ -13,6 +13,7 @@
 				<div class="nav-margin clearfix">
 				<div class="logo">
 					<img src="img/nerds-logo.png" width="160" height="65" alt="Нёрдс">
+					<h1 class="main-title">Дизайн-студия «Нёрдс»</h1>
 				</div>
 				<nav class="main-navigation">
 					<ul>
@@ -169,7 +170,7 @@
 				<span>тел.</span>
 				<a href="tel:+78122757575">+7 (812) 275-75-75</a>
 				</div>
-				<a class="btn writeus-btn" href="#">Напишите нам</a>
+				<a class="btn write-us-btn" href="#">Напишите нам</a>
 			</div>
 		</div>
 		<footer class="main-footer">
@@ -194,17 +195,52 @@
 				<div class="main-user-info">
 				<div class="user-info">
 					<label for="user-name-id" class="contact-name">Ваше имя:</label>
-					<input id="user-name-id" type="text" name="user-name" placeholder="Представьтесь, пожалуйста">
+					<input id="user-name-id" type="text" name="user-name" placeholder="Представьтесь, пожалуйста" required>
 				</div>
 				<div class="user-info">
 					<label for="user-email-id">Ваш e-mail:</label>
-					<input id="user-email-id" type="email" name="user-email" placeholder="Для отправки ответа">
+					<input id="user-email-id" type="email" name="user-email" placeholder="Для отправки ответа" required>
 				</div>
 				</div>
 				<label for="text-id">Текст письма:</label>
-				<textarea id="text-id" rows="2" cols="70" name="text" placeholder="В свободной форме"></textarea>
+				<textarea id="text-id" rows="2" cols="70" name="text" placeholder="В свободной форме" required></textarea>
 				<input class="submit" type="submit" value="Отправить">
 			</form>
 		</div>
+		<script type="text/javascript">
+			var link = document.querySelector(".write-us-btn");
+			var popup = document.querySelector(".modal-content");
+			var close = popup.querySelector(".modal-content-close");
+			var form = popup.querySelector(".writeus-form");
+			var name = popup.querySelector("[name=user-name]");
+
+			
+				
+			link.addEventListener("click", function(event) {
+				event.preventDefault();
+				popup.classList.add("modal-content-show");
+			});
+
+			close.addEventListener("click", function(event) {
+				event.preventDefault();
+				popup.classList.remove("modal-content-show");
+
+				
+			});
+
+			form.addEventListener("submit", function(event) {
+			
+				event.preventDefault();
+				popup.classList.add("modal-error");
+				
+			});
+			window.addEventListener("keydown", function(event) {
+				if (event.keyCode === 27) {
+					if (popup.classList.contains("modal-content-show")) {
+						popup.classList.remove("modal-content-show");
+					}
+				}
+			});
+		</script>
 	</body>
 </html>

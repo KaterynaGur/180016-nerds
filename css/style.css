@@ -1,6 +1,5 @@
 body {
-	min-width: 1200px;
-	min-height: 2442px;
+	position: relative;
 	margin: 0;
 	padding: 0;
 	font-size: 16px;
@@ -65,6 +64,9 @@ p {
 }
 .main-header {
 	background-color: #eeeeee;
+}
+.main-title {
+	text-indent: -9999999px; 
 }
 .nav-catalog {
 	position: relative;
@@ -191,9 +193,9 @@ a {
 	border-radius: 50%;
 	cursor: pointer;
 }
-#btn-1:checked ~ .slide-control label[for="btn-1"]:before,
-#btn-2:checked ~ .slide-control label[for="btn-2"]:before,
-#btn-3:checked ~ .slide-control label[for="btn-3"]:before { 
+#btn-1:checked ~ .slide-control label[for="btn-1"]::before,
+#btn-2:checked ~ .slide-control label[for="btn-2"]::before,
+#btn-3:checked ~ .slide-control label[for="btn-3"]::before { 
 	content: "";
 	position: absolute;
 	top: 0;
@@ -269,9 +271,8 @@ a {
 	background-color: #e74246;
 }
 .btn:active {
-	box-shadow: 
-		inset 0 78px 0 rgba(215,55,59,0.5),
-		inset 0 3px 0px 0 #c13135;
+	box-shadow: inset 0 78px 0 rgba(215,55,59,0.5),
+							inset 0 3px 0 0 #c13135;
 }
 .service {
 	margin-bottom: 80px;
@@ -313,9 +314,8 @@ a {
 	background-color: #00bc6c;
 }
 .service-btn-green:active {
-	box-shadow:
-		inset 0 3px 0 0 #009958,
-		inset 0 78px 0 rgba(0,170,98,1);
+	box-shadow: inset 0 3px 0 0 #009958,
+							inset 0 78px 0 rgba(0,170,98,1);
 }
 .service-btn-yellow {
 	width: 160px;
@@ -325,9 +325,8 @@ a {
 	background-color: #eab534;
 }
 .service-btn-yellow:active {
-	box-shadow:
-		inset 0 3px 0 0 #ce961f,
-		inset 0 78px 0 rgba(229,167,34,1);
+	box-shadow: inset 0 3px 0 0 #ce961f,
+							inset 0 78px 0 rgba(229,167,34,1);
 }
 .studio {
 	border-top: 2px solid #eeeeee;
@@ -361,7 +360,7 @@ a {
 .studio-info li:last-child {
 	margin-bottom: 0;
 }
-.studio-info li:before{
+.studio-info li::before{
 	position: absolute;
 	content: "";
 	background: #fb565a;
@@ -426,7 +425,7 @@ sup {
 .client-item:last-child {
 	margin-right: 0;
 }
-.client-item:after {
+.client-item::after {
 	position: absolute;
 	content: "";
 	background: #eeeeee;
@@ -435,7 +434,7 @@ sup {
 	top: 66px;
 	left: 279px;
 }
-.client-item:last-child:after {
+.client-item:last-child::after {
 	display: none;
 }
 .logo-academy {
@@ -573,7 +572,7 @@ h2.title {
 .phone {
 	margin-bottom: 37px;
 }
-.writeus-btn {
+.write-us-btn {
 	width: 219px;
 	color: #ffffff;
 }
@@ -604,9 +603,8 @@ h2.title {
 	background-color: #e74246;
 }
 .social-btn:active {
-	box-shadow:
-		inset 0 3px 0 0 #c13135,
-		inset 0 78px 0 rgba(215,55,59,0.7);
+	box-shadow: inset 0 3px 0 0 #c13135,
+							inset 0 78px 0 rgba(215,55,59,0.7);
 }
 .social-btn-vk {
 	background-position: 27px -85px;
@@ -689,7 +687,7 @@ aside {
 .range-controls .range-item {
 	position: absolute;
 	top: 30px;
-	left: 0px;
+	left: 0;
 	width: 4px;
 	height: 4px;
 	border-radius: 50%;
@@ -788,6 +786,9 @@ aside {
 .name-radio:hover input[type="radio"] + .radio-indicator {
 	opacity: 1;
 }
+.name-radio input[type="radio"]:disabled + .radio-indicator {
+	opacity: 0.1;
+}
 .special .catalog-title {
 	margin-bottom: 15px;
 }
@@ -828,6 +829,8 @@ aside {
 	left: 5px;
 	width: 5px;
 	height: 12px;
+	border-top-left-radius: 1px;
+	border-top-right-radius: 1px;
 	background: #4d4d4d;
 }
 .name-checkbox input[type="checkbox"]:checked + .checkbox-indicator::before {
@@ -840,8 +843,10 @@ aside {
 	left: 13px;
 	width: 5px;
 	height: 20px;
+	border-top-left-radius: 1px;
+	border-top-right-radius: 1px;
 	background: #4d4d4d;
-	box-shadow: 0 -13px 0 3px #ffffff;
+	box-shadow: 0 -12px 0 3px #ffffff;
 }
 .name-checkbox input[type="checkbox"]:checked + .checkbox-indicator::after {
 	transform: rotate(45deg);
@@ -851,6 +856,9 @@ aside {
 }
 .name-checkbox:hover input[type="checkbox"] + .checkbox-indicator {
 	opacity: 1;
+}
+.name-checkbox input[type="checkbox"]:disabled + .checkbox-indicator {
+	opacity: 0.1;
 }
 .submit {
 	font-size: 16px;
@@ -871,10 +879,9 @@ aside {
 	background-color: #dfdfdf;
 }
 .submit:active {
-	box-shadow: 
-		inset 0 3px 0 0#bfbfbf,
-		inset 0 50px 0 0 rgba(213,213,213,1);
-		outline: none;
+	box-shadow: inset 0 3px 0 0#bfbfbf,
+							inset 0 50px 0 0 rgba(213,213,213,1);
+	outline: none;
 }
 .product {
 	float: right;
@@ -1000,7 +1007,7 @@ aside {
 .card-item:hover .dots {
 	background-color: #4d4d4d;
 }
-.card-item:hover .foto-item {
+.card-item:hover .photo-item {
 	box-shadow: 0 5px 22px 0 #cccccc;
 }
 .card-item:hover .buy-item {
@@ -1087,9 +1094,8 @@ h3.template {
 	background-color: #dfdfdf;
 }
 .pagination a:active {
-	box-shadow: 
-	inset 0 3px 0 0#bfbfbf,
-	inset 0 50px 0 0 rgba(213,213,213,1);
+	box-shadow: inset 0 3px 0 0#bfbfbf,
+							inset 0 50px 0 0 rgba(213,213,213,1);
 }
 .pagination .current {
 	border: 3px solid #dbdbdb;
@@ -1104,7 +1110,7 @@ h3.template {
 }
 .modal-content {
 	position: absolute;
-	top: 1706px;
+	bottom: 181px;
 	left: 50%;
 	margin-left: -480px;
 	width: 760px;
@@ -1113,6 +1119,12 @@ h3.template {
 	color: #000000;
 	box-shadow: 0 19px 48px 3px #595a5a;
 	display: none;
+}
+.modal-content-show {
+  display: block;
+}
+.modal-error {
+  animation: shake 0.6s;
 }
 .modal-content-close {
 	position: absolute;
@@ -1124,23 +1136,13 @@ h3.template {
 	border: 0;
 	cursor: pointer;
 	background-color: transparent;
+	background: url(../img/modal-close.png) no-repeat 0 0;
 }
-.modal-content-close::before,
-.modal-content-close::after {
-	content: "";
-	position: absolute;
-	top: 9px;
-	left: -3px;
-	width: 27px;
-	height: 4px;
-	background-color: #fecccd;
-	border-radius: 1px;
+.modal-content-close:hover {
+	background: url(../img/modal-close.png) no-repeat 0 -23px;
 }
-.modal-content-close::before {
-	transform: rotate(45deg);
-}
-.modal-content-close::after {
-	transform: rotate(-45deg);
+.modal-content-close:active {
+	background: url(../img/modal-close.png) no-repeat 0 -47px;
 }
 .modal-content h2 {
 	margin: 0;
@@ -1178,11 +1180,6 @@ h3.template {
 .writeus-form textarea:focus {
 	border-color: #000000;
 	outline: 0;
-}
-.writeus-form input[type="text"]:invalid,
-.writeus-form input[type="email"]:invalid {
-	border-color: #e74246;
-	color: #e74246;
 }
 .writeus-form .user-info {
 	display: inline-block;
@@ -1227,7 +1224,6 @@ h3.template {
 	background-color: #e74246;
 }
 .writeus-form input[type="submit"]:active {
-	box-shadow: 
-		inset 0 78px 0 rgba(215,55,59,0.5),
-		inset 0 3px 0px 0 #c13135;
+	box-shadow: inset 0 78px 0 rgba(215,55,59,0.5),
+							inset 0 3px 0 0 #c13135;
 }
