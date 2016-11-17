@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Напишите нам</title>
+		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+		<link  href="css/normalize.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="container form-list">
+			<h2 class="modal-content-title">Напишите нам</h2>
+			<form class="writeus-form" action="#" method="post">
+				<div class="main-user-info">
+					<div class="user-info">
+						<label for="user-name-id" class="contact-name">Ваше имя:</label>
+						<input id="user-name-id" type="text" name="user-name" placeholder="Представьтесь, пожалуйста" required>
+					</div>
+					<div class="user-info">
+						<label for="user-email-id">Ваш e-mail:</label>
+						<input id="user-email-id" type="email" name="user-email" placeholder="Для отправки ответа" required>
+					</div>
+				</div>
+				<label for="text-id">Текст письма:</label>
+				<textarea id="text-id" rows="2" cols="70" name="text" placeholder="В свободной форме" required></textarea>
+				<input class="submit" type="submit" value="Отправить">
+			</form>
+		</div>
+	</body>
+</html>
