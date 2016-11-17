@@ -829,7 +829,6 @@ aside {
 	left: 1px;
 	width: 18px;
 	height: 18px;
-	border-radius: 3px;
 	border: 2px solid #4d4d4d;
 	background: #ffffff;
 	border-radius: 4px;
@@ -899,7 +898,7 @@ input[type="checkbox"]:disabled ~ .title-checkbox {
 }
 .submit:active {
 	box-shadow: inset 0 3px 0 0#bfbfbf,
-							inset 0 50px 0 0 rgba(213,213,213,1);
+				inset 0 50px 0 0 rgba(213,213,213,1);
 	outline: none;
 }
 .product {
@@ -1113,7 +1112,7 @@ h3.template {
 }
 .pagination a:active {
 	box-shadow: inset 0 3px 0 0#bfbfbf,
-							inset 0 50px 0 0 rgba(213,213,213,1);
+				inset 0 50px 0 0 rgba(213,213,213,1);
 }
 .pagination .current {
 	border: 3px solid #dbdbdb;
@@ -1187,9 +1186,7 @@ h3.template {
 	background: url(../img/modal-close.png) no-repeat 0 -47px;
 }
 .modal-content h2 {
-	margin: 0;
-	margin-left: -1px;
-	margin-bottom: 41px;
+	margin: 0 0 41px -1px;
 	font-size: 45px;
 	line-height: 45px;
 	color: #000000;
