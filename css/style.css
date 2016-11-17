@@ -274,7 +274,7 @@ a {
 }
 .btn:active {
 	box-shadow: inset 0 78px 0 rgba(215,55,59,0.5),
-							inset 0 3px 0 0 #c13135;
+				inset 0 3px 0 0 #c13135;
 }
 .service {
 	margin-top: 80px;
@@ -320,7 +320,7 @@ a {
 }
 .service-btn-green:active {
 	box-shadow: inset 0 3px 0 0 #009958,
-							inset 0 78px 0 rgba(0,170,98,1);
+				inset 0 78px 0 rgba(0,170,98,1);
 }
 .service-btn-yellow {
 	width: 160px;
@@ -331,7 +331,7 @@ a {
 }
 .service-btn-yellow:active {
 	box-shadow: inset 0 3px 0 0 #ce961f,
-							inset 0 78px 0 rgba(229,167,34,1);
+				inset 0 78px 0 rgba(229,167,34,1);
 }
 .studio {
 	border-top: 2px solid #eeeeee;
@@ -617,7 +617,7 @@ h2.title {
 }
 .social-btn:active {
 	box-shadow: inset 0 3px 0 0 #c13135,
-							inset 0 78px 0 rgba(215,55,59,0.7);
+				inset 0 78px 0 rgba(215,55,59,0.7);
 }
 .social-btn-vk {
 	background-position: 26px -85px;
@@ -846,7 +846,8 @@ aside {
 	background: #4d4d4d;
 }
 .name-checkbox input[type="checkbox"]:checked + .checkbox-indicator::before {
-	transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	        transform: rotate(-45deg);
 }
 .name-checkbox input[type="checkbox"]:checked + .checkbox-indicator::after {
 	content: "";
@@ -861,7 +862,8 @@ aside {
 	box-shadow: 0 -12px 0 3px #ffffff;
 }
 .name-checkbox input[type="checkbox"]:checked + .checkbox-indicator::after {
-	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	        transform: rotate(45deg);
 }
 .name-checkbox:hover {
 	color: #000000;
@@ -1141,7 +1143,8 @@ h3.template {
 	display: block;
 	-webkit-animation-name: zoom;
 	animation-name: zoom;
-	animation-duration: 1s;
+	-webkit-animation-duration: 1s;
+	        animation-duration: 1s;
 }
 @-webkit-keyframes zoom {
 	from {
@@ -1270,7 +1273,7 @@ h3.template {
 }
 .writeus-form input[type="submit"]:active {
 	box-shadow: inset 0 78px 0 rgba(215,55,59,0.5),
-							inset 0 3px 0 0 #c13135;
+				inset 0 3px 0 0 #c13135;
 }
 .form-list {
 	margin: 70px auto;
